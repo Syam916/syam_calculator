@@ -4,6 +4,23 @@ let result=document.getElementById("result")
 for(let i=0;i<butt.length;i++){
     butt[i].onclick=function(){
         let input=this.innerHTML;
+
+        switch(input){
+            case "=":
+                let audio1=new Audio("end.mp3");
+                audio1.play();
+                break;
+            case "C":
+                let audio2=new Audio("clear.mp3");
+                audio2.play();
+                break;
+            default:
+                let audio3=new Audio("click.mp3");
+                audio3.play();
+                break;
+
+
+        }
         updateDisplay(input);
     }
 }
@@ -47,11 +64,3 @@ function updateDisplay(input){
     }
      
 }
-
-// butt.addEventListener("click",change)
-// function change (){
-//     alert("button clicked")
-//     console.log("hi button clicked ")
-// };
-
-// alert("hi welcome")
